@@ -43,10 +43,22 @@
       "price": 55
     },
     {
-      "name": "Army Man",
-      "image": "https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/images/ian-mckellen-the-hobbit-gandalf.jpeg",
-      "price": "3",
+      "name": "Gandalf the Gray ",
+      "image": "https://c8.alamy.com/comp/CC3NGT/the-lord-of-the-rings-2001-2003-new-line-cinema-film-with-ian-mckellan-CC3NGT.jpg",
+      "price": "2",
       "id": 8
+    },
+    {
+      "name": "Gandalf",
+      "image": "https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/images/ian-mckellen-the-hobbit-gandalf.jpeg",
+      "price": "2",
+      "id": 9
+    },
+    {
+      "name": "Army Man",
+      "image": "https://www.toyhalloffame.org/sites/www.toyhalloffame.org/files/toys/square/little-green-army-men.gif",
+      "price": "30",
+      "id": 10
     }
   ]
 }

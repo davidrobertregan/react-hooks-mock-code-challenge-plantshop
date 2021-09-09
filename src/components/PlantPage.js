@@ -6,17 +6,22 @@ import Search from "./Search";
 function PlantPage() {
 
 const [newPlant, setNewPlant] = useState({})
+const [searchValue, setSearchValue] = useState("")
+
 
   function addNewPlant(formData) {
     setNewPlant(formData)  
   }
 
+  function returnSearchValue(searchInput) {
+    setSearchValue(searchInput)
+  }
 
   return (
     <main>
       <NewPlantForm addNewPlant={addNewPlant}/>
-      <Search />
-      <PlantList newPlant={newPlant}/>
+      <Search returnSearchValue={returnSearchValue}/>
+      <PlantList newPlant={newPlant} searchValue={searchValue}/>
     </main>
   );
 }
