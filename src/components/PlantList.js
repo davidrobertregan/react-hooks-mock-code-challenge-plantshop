@@ -14,9 +14,13 @@ const [plants, setPlants] = useState([])
         setPlants(plantArr))
   }, [newPlant])
 
+  function deletePlant(id) {
+    setPlants(plants.filter(plant => plant.id !== id))
+  }
+
   const filteredPlants = plants.filter(plant => plant.name.toLowerCase().includes(searchValue.toLowerCase()))
 
-  const plantCards = filteredPlants.map(plant => plant.name ? <PlantCard key={plant.id} plant={plant}/> : null)
+  const plantCards = filteredPlants.reverse().map(plant => plant.name ? <PlantCard key={plant.id} plant={plant} deletePlant={deletePlant}/> : null)
 
   return (
     <ul className="cards">{plantCards}</ul>
