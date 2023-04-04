@@ -13,11 +13,16 @@ function PlantPage() {
       .then(plants => setPlants(plants))
   }
 
+  const onAddPlant = (plant) => {
+    const updatedPlants = [plant, ...plants]
+    setPlants(updatedPlants)
+  }
+
   useEffect(getPlants, [])
 
   return (
     <main>
-      <NewPlantForm />
+      <NewPlantForm onAddPlant={onAddPlant} />
       <Search />
       <PlantList plants={plants}/>
     </main>

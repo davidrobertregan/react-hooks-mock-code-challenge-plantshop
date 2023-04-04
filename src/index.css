@@ -106,6 +106,7 @@ input:focus {
 }
 
 .card img {
+  max-height: 232px;
   width: 100%;
 }
 

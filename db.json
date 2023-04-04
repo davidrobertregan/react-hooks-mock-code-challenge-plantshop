@@ -41,6 +41,12 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "id": 7284,
+      "name": "Sequoia",
+      "image": "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTYw25aXllX8wCrY4UCRjFiczdHo32B0chPZeWG__nQ_g8hnwY8TK4H_oa9__V7Bi-smI6HMYmZ2JdETl4",
+      "price": "100"
     }
   ]
 }

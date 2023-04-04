@@ -1,7 +1,6 @@
 import React from "react";
 
 function PlantCard({ plant }) {
-
   return (
     <li className="card">
       <img src={plant.image} alt={plant.name} />
