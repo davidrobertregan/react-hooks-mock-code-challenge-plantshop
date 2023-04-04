@@ -6,11 +6,12 @@ import Search from "./Search";
 function PlantPage() {
 
   const [plants, setPlants] = useState([])
+  const [searchValue, setSearchValue] = useState("")
 
   const getPlants = () => {
     fetch("http://localhost:6001/plants")
       .then(resp => resp.json())
-      .then(plants => setPlants(plants))
+      .then(plantsData => setPlants(plantsData))
   }
 
   const onAddPlant = (plant) => {
@@ -23,8 +24,8 @@ function PlantPage() {
   return (
     <main>
       <NewPlantForm onAddPlant={onAddPlant} />
-      <Search />
-      <PlantList plants={plants}/>
+      <Search setSearchValue={setSearchValue}/>
+      <PlantList searchValue={searchValue} plants={plants}/>
     </main>
   );
 }
