@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function PlantCard({ plant }) {
+function PlantCard({ plant, onDeletePlant }) {
 
   const [inStock, setInStock] = useState(true)
   const [showEdit, setShowEdit] = useState(false)
@@ -15,9 +15,14 @@ function PlantCard({ plant }) {
       body: JSON.stringify({...plant, price: plantPrice})
     })
     .then(resp => resp.json())
-    .then(plant => {
-      setShowEdit(false)
+    .then(plant => setShowEdit(false))
+  }
+
+  const handleDelete = () => {
+    fetch(`http://localhost:6001/plants/${plant.id}`,{
+      method: "DELETE"
     })
+    onDeletePlant(plant.id)
   }
 
   return (
@@ -40,6 +45,7 @@ function PlantCard({ plant }) {
       ) : (
         <button onClick={() => setInStock(true)}>Out of Stock</button>
       )}
+      <button onClick={handleDelete}>❌</button>
     </li>
   );
 }

@@ -26,6 +26,7 @@ function NewPlantForm({ onAddPlant }) {
     })
       .then(resp => resp.json())
       .then(plant =>  onAddPlant(plant))
+      setFormData(emptyFormData)
   }
 
   return (

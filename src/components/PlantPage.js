@@ -19,13 +19,18 @@ function PlantPage() {
     setPlants(updatedPlants)
   }
 
+  const onDeletePlant = (id) => {
+    const updatedPlants = plants.filter(p => p.id !== id)
+    setPlants(updatedPlants)
+  }
+
   useEffect(getPlants, [])
 
   return (
     <main>
       <NewPlantForm onAddPlant={onAddPlant} />
       <Search setSearchValue={setSearchValue}/>
-      <PlantList searchValue={searchValue} plants={plants}/>
+      <PlantList searchValue={searchValue} onDeletePlant={onDeletePlant} plants={plants}/>
     </main>
   );
 }
